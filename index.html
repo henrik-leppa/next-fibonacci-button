@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      next-fibonacci-button
+    </title>
+  </head>
+  <body>
+    <main>
+      <h1>
+        next-fibonacci-button
+      </h1>
+      <p>
+        Next Fibonacci:
+        <output id="next-fibonacci-output">(empty)</output>
+      </p>
+      <p>
+        <button type="button" id="calculate-next-button">
+          Calculate next
+        </button>
+      </p>
+    </main>
+    <script>
+let nextFibonacciOutput = document.querySelector('#next-fibonacci-output');
+let calculateNextButton = document.querySelector('#calculate-next-button');
+let previousFibonacci = 0;
+let nextFibonacci = 1;
+
+calculateNextButton.addEventListener('click', event => {
+  nextFibonacciOutput.textContent = nextFibonacci;
+  newPreviousFibonacci = nextFibonacci;
+  nextFibonacci = previousFibonacci + nextFibonacci;
+  previousFibonacci = newPreviousFibonacci;
+});
+    </script>
+  </body>
+</html>
+
